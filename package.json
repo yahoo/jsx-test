@@ -1,0 +1,32 @@
+{
+  "name": "jsx-test",
+  "version": "0.0.1",
+  "description": "Minimal lib to help testing React Components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./examples/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3den/jsx-test.git"
+  },
+  "keywords": [
+    "test",
+    "reactjs",
+    "jsx"
+  ],
+  "author": "Marcelo Eden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3den/jsx-test/issues"
+  },
+  "homepage": "https://github.com/3den/jsx-test",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "jsdom": "^3.0.0",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
+  }
+}
