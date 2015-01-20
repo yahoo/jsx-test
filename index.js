@@ -24,7 +24,19 @@ require.extensions['.jsx'] = function(module, filename) {
     return module._compile(compiled, filename);
 };
 
-// Exports
+/**
+ * Allow `jsx` files to be required.
+ * This module should be required before any React class.
+ * @module jsx-test
+ *
+ * @example
+ * var jsx = require('jst-test');
+ * var Component = require('path/to/YourComponet.jsx');
+ *
+ * describe('YourComponet', function () {
+ *      ... test your stuff
+ * });
+ **/
 module.exports = {
     // Helpers
     simulateEvent: helper.simulateEvent,
