@@ -29,10 +29,10 @@ describe('CheckboxWithLabel', function() {
 
     describe('#render', function () {
         it('renders with a custom label OFF', function () {
-            jsx.assertRenderInclude(CheckboxWithLabel, {
+            jsx.assertRender(CheckboxWithLabel, {
                 labelOff: 'I am OFF',
                 isChecked: false
-            }, 'I am OFF')
+            }, '*I am OFF*')
 
             jsx.assertRenderInclude(CheckboxWithLabel, {
                 labelOff: 'Offline',
@@ -41,7 +41,7 @@ describe('CheckboxWithLabel', function() {
         });
 
         it('renders with a custom label ON', function () {
-            jsx.assertRenderInclude(CheckboxWithLabel, {
+            jsx.assertRender(CheckboxWithLabel, {
                 labelOn: 'I am ON',
                 isChecked: true
             }, 'I am ON')
