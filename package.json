@@ -1,7 +1,7 @@
 {
   "name": "jsx-test",
-  "version": "0.0.1",
-  "description": "Minimal lib to help testing React Components.",
+  "version": "0.1.0",
+  "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./examples/**/*.test.js"
