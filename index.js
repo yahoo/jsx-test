@@ -1,3 +1,7 @@
+/**
+ * Copyright 2014, Yahoo! Inc.
+ * Copyrights licensed under the MIT License. See the accompanying LICENSE file for terms.
+ */
 'use strict';
 
 // Set browser globals, needs to happen before react is required
