@@ -32,9 +32,9 @@ describe('CheckboxWithLabel', function() {
             jsx.assertRender(CheckboxWithLabel, {
                 labelOff: 'I am OFF',
                 isChecked: false
-            }, '*I am OFF*')
+            }, 'I am OFF')
 
-            jsx.assertRenderInclude(CheckboxWithLabel, {
+            jsx.assertRender(CheckboxWithLabel, {
                 labelOff: 'Offline',
                 isChecked: false
             }, 'Offline')
@@ -46,14 +46,15 @@ describe('CheckboxWithLabel', function() {
                 isChecked: true
             }, 'I am ON')
 
-            jsx.assertRenderInclude(CheckboxWithLabel, {
+            jsx.assertRender(CheckboxWithLabel, {
                 labelOn: 'Online',
                 isChecked: true
             }, 'Online')
         });
 
         it('renders with a checkbox field', function () {
-            jsx.assertRenderInclude(CheckboxWithLabel, {}, '<input type="checkbox">');
+            jsx.assertRender(CheckboxWithLabel, {}, '<input type="checkbox">');
+
             jsx.assertRenderInclude(CheckboxWithLabel, {
                 isChecked: true
             }, '<input type="checkbox" checked>');

@@ -50,5 +50,8 @@ module.exports = {
 
     // Assertions
     assertRender: assert.renderMatch,
-    assertRenderInclude: assert.renderInclude
+    assertRenderInclude: assert.renderInclude,
+
+    // Mocks
+    ComponentStub: require('./lib/ComponentStub.jsx')
 };
