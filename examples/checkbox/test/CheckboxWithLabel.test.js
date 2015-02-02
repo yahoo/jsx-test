@@ -40,6 +40,20 @@ describe('CheckboxWithLabel', function() {
             }, 'Offline')
         });
 
+        it('does not render a the unchecked label', function () {
+            jsx.assertNotRender(CheckboxWithLabel, {
+                labelOn: 'On',
+                labelOff: 'Off',
+                isChecked: false
+            }, 'On')
+
+            jsx.assertNotRender(CheckboxWithLabel, {
+                labelOn: 'On',
+                labelOff: 'Off',
+                isChecked: true
+            }, 'Off')
+        });
+
         it('renders with a custom label ON', function () {
             jsx.assertRender(CheckboxWithLabel, {
                 labelOn: 'I am ON',
@@ -55,7 +69,7 @@ describe('CheckboxWithLabel', function() {
         it('renders with a checkbox field', function () {
             jsx.assertRender(CheckboxWithLabel, {}, '<input type="checkbox">');
 
-            jsx.assertRenderInclude(CheckboxWithLabel, {
+            jsx.assertRender(CheckboxWithLabel, {
                 isChecked: true
             }, '<input type="checkbox" checked>');
         });

@@ -50,6 +50,7 @@ module.exports = {
 
     // Assertions
     assertRender: assert.renderMatch,
+    assertNotRender: assert.renderNotMatch,
     assertRenderInclude: assert.renderInclude,
 
     // Mocks

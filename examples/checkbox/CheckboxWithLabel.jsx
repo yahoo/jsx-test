@@ -4,7 +4,11 @@ module.exports = React.createClass({
     displayName: 'CheckboxWithLabel',
 
     getDefaultProps: function () {
-        return { isChecked: false };
+        return {
+            labelOn: 'On',
+            labelOff: 'Off',
+            isChecked: false
+        };
     },
 
     getInitialState: function() {
