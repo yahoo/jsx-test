@@ -47,12 +47,10 @@ module.exports = {
     renderComponent: helper.renderComponent,
     elementQuerySelector: helper.elementQuerySelector,
     elementQuerySelectorAll: helper.elementQuerySelectorAll,
+    stubComponent: helper.stubComponent,
 
     // Assertions
     assertRender: assert.renderMatch,
     assertNotRender: assert.renderNotMatch,
     assertRenderInclude: assert.renderInclude,
-
-    // Mocks
-    ComponentStub: require('./lib/ComponentStub.jsx')
 };
