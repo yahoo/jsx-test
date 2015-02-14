@@ -18,23 +18,13 @@ describe('jsxTest', function () {
             jsx.assertRender(ComponentStub, {}, '<p>hello world!</p>');
         });
 
-        it('asserts the properties', function () {
-            var ComponentStub = jsx.stubComponent('a', null, {name: "Jake The Dog"});
+        it('adds all props to data props', function () {
+            var ComponentStub = jsx.stubComponent('a', null, true);
 
-            assert.throws(function () {
-                jsx.assertRender(ComponentStub, {}, 'a');
-            });
-
-            assert.doesNotThrow(function () {
-                jsx.assertRender(ComponentStub, {name: 'Jake The Dog'}, 'a');
-            });
-
-            assert.doesNotThrow(function () {
-                jsx.assertRender(ComponentStub, {
-                    name: 'Jake The Dog',
-                    className: 'btn'
-                }, 'a');
-            });
+            jsx.assertRender(ComponentStub, {
+                name: 'Jake The Dog',
+                what: 'is it?'
+            }, '<a name="Jake The Dog" data-name="Jake The Dog" data-what="is it?">');
         });
     });
 });
