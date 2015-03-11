@@ -1,5 +1,5 @@
 // jsx-test
-var jsx = require('../../../index');
+var jsx = require('../../index');
 var assert = require('assert');
 
 describe('CheckboxWithLabel', function() {
