@@ -20,7 +20,6 @@ module.exports = React.createClass({
     },
 
     onHover: function () {
-        console.log("enter enter eneenter enter enerr")
         this.setState({isHover: true});
     },
 
