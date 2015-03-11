@@ -44,6 +44,7 @@ require.extensions['.jsx'] = function(module, filename) {
 module.exports = {
     // Helpers
     simulateEvent: helper.simulateEvent,
+    simulateNativeEvent: helper.simulateNativeEvent,
     renderComponent: helper.renderComponent,
     elementQuerySelector: helper.elementQuerySelector,
     elementQuerySelectorAll: helper.elementQuerySelectorAll,

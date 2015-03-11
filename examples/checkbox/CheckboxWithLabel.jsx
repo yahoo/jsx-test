@@ -19,9 +19,18 @@ module.exports = React.createClass({
         this.setState({isChecked: !this.state.isChecked});
     },
 
+    onHover: function () {
+        console.log("enter enter eneenter enter enerr")
+        this.setState({isHover: true});
+    },
+
+    onHoverLeave: function () {
+        this.setState({isHover: false});
+    },
+
     render: function() {
         return (
-            <label>
+            <label onMouseEnter={this.onHover} onMouseLeave={this.onHoverLeave}>
                 <input
                     type="checkbox"
                     checked={this.state.isChecked}

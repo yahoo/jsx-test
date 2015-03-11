@@ -27,6 +27,16 @@ describe('CheckboxWithLabel', function() {
         assert.equal(checkbox.getDOMNode().textContent, 'Off');
     });
 
+    it('triggers native events', function () {
+        var checkbox = jsx.renderComponent(CheckboxWithLabel);
+
+        jsx.simulateNativeEvent(checkbox, 'mouseOver');
+        assert.equal(checkbox.state.isHover, true);
+
+        jsx.simulateNativeEvent(checkbox, 'mouseOut');
+        assert.equal(checkbox.state.isHover, false);
+    });
+
     describe('#render', function () {
         it('renders with a custom label OFF', function () {
             jsx.assertRender(CheckboxWithLabel, {
