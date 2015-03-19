@@ -1,6 +1,7 @@
 // jsx-test
 var jsx = require('../index');
-var React = require('react/addons')
+var React = require('react/addons');
+var assert = require('assert');
 
 describe('#withContext', function() {
     it('gives child context', function () {
@@ -19,7 +20,7 @@ describe('#withContext', function() {
             }
         };
 
-        jsx.assertRender(jsx.withContext(context, ContextUser), {}, '<span>Awesome String!</span>');
+        jsx.assertRender(jsx.withContext(ContextUser, context), {}, '<span>Awesome String!</span>');
     });
 
     it('passes props through context wrapper to child', function () {
@@ -29,6 +30,26 @@ describe('#withContext', function() {
             }
         });
 
-        jsx.assertRender(jsx.withContext({}, ContextUser), {str: 'Awesome String!'}, '<span>Awesome String!</span>');
+        jsx.assertRender(jsx.withContext(ContextUser, {}), {str: 'Awesome String!'}, '<span>Awesome String!</span>');
+    });
+
+    it('creates a readable displayName using Component.displayName', function () {
+        var NamedComponent = jsx.stubComponent('Name');
+
+        assert(
+            jsx.withContext(NamedComponent).displayName === 'Name:withContext',
+            'Expected displayName to equal "Name:withContext"'
+        );
+    });
+
+    it('creates a readable displayName even if Component did not have one', function () {
+        var UnnamedComponent = React.createClass({
+            render: function () {return null;}
+        });
+
+        assert(
+            jsx.withContext(UnnamedComponent, {}).displayName === 'Component:withContext',
+            'Expected displayName to equal "Component:withContext"'
+        );
     });
 });
