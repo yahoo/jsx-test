@@ -35,11 +35,7 @@ describe('#withContext', function() {
 
     it('creates a readable displayName using Component.displayName', function () {
         var NamedComponent = jsx.stubComponent('Name');
-
-        assert(
-            jsx.withContext(NamedComponent, {}).displayName === 'Name:withContext',
-            'Expected displayName to equal "Name:withContext"'
-        );
+        assert.equal(jsx.withContext(NamedComponent, {}).displayName, 'Name:withContext');
     });
 
     it('creates a readable displayName even if Component did not have one', function () {
@@ -47,9 +43,6 @@ describe('#withContext', function() {
             render: function () {return null;}
         });
 
-        assert(
-            jsx.withContext(UnnamedComponent, {}).displayName === 'Component:withContext',
-            'Expected displayName to equal "Component:withContext"'
-        );
+        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'Component:withContext');
     });
 });
