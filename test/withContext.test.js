@@ -37,7 +37,7 @@ describe('#withContext', function() {
         var NamedComponent = jsx.stubComponent('Name');
 
         assert(
-            jsx.withContext(NamedComponent).displayName === 'Name:withContext',
+            jsx.withContext(NamedComponent, {}).displayName === 'Name:withContext',
             'Expected displayName to equal "Name:withContext"'
         );
     });
