@@ -19,4 +19,4 @@ npm install --save-dev jsx-test
 
 ## Example
 
-Check our [examples](https://github.com/3den/jsx-test/tree/master/example).
+Check our [examples](https://github.com/3den/jsx-test/tree/master/example) and [tests](https://github.com/3den/jsx-test/tree/master/test).
