@@ -49,6 +49,7 @@ module.exports = {
     elementQuerySelector: helper.elementQuerySelector,
     elementQuerySelectorAll: helper.elementQuerySelectorAll,
     stubComponent: helper.stubComponent,
+    withContext: helper.withContext,
 
     // Assertions
     assertRender: assert.renderMatch,
