@@ -1,6 +1,6 @@
 {
   "name": "jsx-test",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/3den/jsx-test.git"
+    "url": "https://github.com/yahoo/jsx-test.git"
   },
   "keywords": [
     "test",
@@ -18,9 +18,9 @@
   "author": "Marcelo Eden",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3den/jsx-test/issues"
+    "url": "https://github.com/yahoo/jsx-test/issues"
   },
-  "homepage": "https://github.com/3den/jsx-test",
+  "homepage": "https://github.com/yahoo/jsx-test",
   "devDependencies": {
     "mocha": "^2.1.0"
   },
