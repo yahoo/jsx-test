@@ -1,4 +1,5 @@
 # jsx-test
+[![Build Status](https://travis-ci.org/yahoo/jsx-test.svg?branch=master)](https://travis-ci.org/yahoo/jsx-test)
 
 `jsx-test` is a tool that makes it easy to test '.jsx' files and includes some helpers for testing react components.
 
