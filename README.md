@@ -65,7 +65,7 @@ Wraps component in a context creating component.
 ```js
 assertRender(ReactComponent Component, Object props, String expectedHTML)
 ```
-Assert component render matches the `expectedHTML`. Specific `expectedHTML` regex conversion can be seen [here](https://github.com/yahoo/jsx-test/blob/master/lib/assert.js#L11).
+Assert component render matches the `expectedHTML`. The `expectedHTML` regex conversion can be seen [here](https://github.com/yahoo/jsx-test/blob/master/test/assertRender.test.js).
 
 ### assertNotRender
 ```js
