@@ -18,6 +18,61 @@ The main features of `jsx-test` are:
 npm install --save-dev jsx-test
 ```
 
+## Usage
+### simulateEvent
+```js
+simulateEvent(ReactComponent element, String event)
+simulateEvent(DOMElement element, String event)
+```
+
+Simulates an `event` on an `element`.
+
+### renderComponent
+```js
+ReactElement renderComponent(ReactComponent comp, Object? props, any? children)
+```
+
+Renders a component w/ its props and children.
+
+### elementQuerySelector
+```js
+DOMElement elementQuerySelector(ReactComponent comp, String selector)
+```
+
+Gets 1st child of `comp` using selector `selector`
+
+### elementQuerySelectorAll
+```js
+DOMElement[] elementQuerySelectorAll(ReactComponent comp, String selector)
+```
+
+Gets children of `comp` using selector `selector`
+
+### stubComponent
+```js
+ReactComponent stubComponent(ReactElement tag, any? children, boolean? showDataProps)
+ReactComponent stubComponent(String tag, any? children, boolean? showDataProps)
+```
+Creates a stub component with `tag` and its `children`. If `showDataProps` is true, all props will be set in the rendered `DOMElement` in the form of `data-<propKey> = <propValue>`.
+
+### withContext
+```js
+ReactComponent withContext(ReactComponent Component, Object context)
+```
+Wraps component in a context creating component.
+
+### assertRender
+```js
+assertRender(ReactComponent Component, Object props, String expectedHTML)
+```
+Assert component render matches the `expectedHTML`. Specific `expectedHTML` regex conversion can be seen [here](https://github.com/yahoo/jsx-test/blob/master/lib/assert.js#L11).
+
+### assertNotRender
+```js
+assertNotRender(ReactComponent Component, Object props, String unexpectedHTML)
+```
+The reverse of `assertRender`.
+
 ## Example
 
 Check our [examples](https://github.com/3den/jsx-test/tree/master/example) and [tests](https://github.com/3den/jsx-test/tree/master/test).
