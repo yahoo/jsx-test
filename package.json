@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "jsdom": "^3.0.0",
-    "react": "^0.12.2",
-    "react-tools": "^0.12.2"
+    "react": "0.12.2 - 0.13.x",
+    "react-tools": "0.12.2 - 0.13.x"
   }
 }
