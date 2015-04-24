@@ -25,6 +25,21 @@ describe('#assertRender', function() {
         }, '<div class="alert warning">Looks weird</div>');
     });
 
+    it('should handle data-react-* truncation correctly', function () {
+        var Alerts = React.createClass({
+            displayName: 'Alerts',
+            render: function () {
+                return React.createElement('div', null, [
+                    // Note the space in the key
+                    React.createElement(Alert, { message: 'foo bar', key: 'foo bar' }),
+                    React.createElement(Alert, { message: 'foo2 bar2', key: 'foo bar2' })
+                ]);
+            }
+        });
+
+        jsx.assertRender(Alerts, null, '<div><div+>foo*</div><div+>foo2 bar2</div></div>');
+    });
+
     it('includes some expecific content on the rendered HTML', function () {
         var props = {
             className: 'notice',
