@@ -1,6 +1,6 @@
 {
   "name": "jsx-test",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "jsdom": "^3.0.0",
-    "react": "0.12.2 - 0.13.x",
-    "react-tools": "0.12.2 - 0.13.x"
+    "react": "^0.13.0",
+    "react-tools": "^0.13.0"
   }
 }
