@@ -32,6 +32,20 @@ describe('#withContext', function() {
 
         jsx.assertRender(jsx.withContext(ContextUser, {}), {str: 'Awesome String!'}, '<span>Awesome String!</span>');
     });
+    
+    it('allows calling methods from underlying component', function () {
+        var UnderlyingComponent = React.createClass({
+            underlyingMethod: function (n1, n2) {
+                return n1 + n2;
+            },
+            render: function () {
+                return null;
+            }
+        });
+
+        var wrapper = jsx.renderComponent(jsx.withContext(UnderlyingComponent, {}));
+        assert.equal(wrapper.runChildMethod('underlyingMethod', [1, 2]), 3);
+    });
 
     it('creates a readable displayName using Component.displayName', function () {
         var NamedComponent = jsx.stubComponent('Name');
