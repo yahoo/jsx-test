@@ -57,6 +57,6 @@ describe('#withContext', function() {
             render: function () {return null;}
         });
 
-        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'Component:withContext');
+        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'UnnamedComponent:withContext');
     });
 });

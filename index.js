@@ -14,19 +14,10 @@ global.Event = window.Event;
 
 // Require other dependencies
 var fs = require('fs');
-var ReactTools = require('react-tools');
 
 // Require libs
 var assert = require('./lib/assert');
 var helper = require('./lib/helper');
-
-// Allows requirea to load `.jsx` files directly
-require.extensions['.jsx'] = function(module, filename) {
-    var content;
-    content = fs.readFileSync(filename, 'utf8');
-    var compiled = ReactTools.transform(content, {harmony: true});
-    return module._compile(compiled, filename);
-};
 
 /**
  * Allow `jsx` files to be required.
