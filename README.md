@@ -5,14 +5,15 @@
 
 The main features of `jsx-test` are:
 
-* Allows you to require `.jsx` files directly in your test.
 * Includes some helpers to simplify the test of React Components.
 * Assertion methods to check the component renders the correct html based on the given `props`.
 * Does NOT automock your dependencies.
 * Is much simpler and faster than Jest.
 * Works with `mocha`, `jasmine` or any other test framework.
 
-## Install
+*Note:* If you would like to require jsx files directly please follow [these instructions](https://babeljs.io/docs/setup/)
+
+## Instal
 
 ```
 npm install --save-dev jsx-test
