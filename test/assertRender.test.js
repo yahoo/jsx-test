@@ -25,6 +25,12 @@ describe('#assertRender', function() {
         }, '<div class="alert warning">Looks weird</div>');
     });
 
+    it('renders the attomic classes HTML', function () {
+        jsx.assertRender(Alert, {
+            className: 'P(10px) C($blue)',
+        }, '<div class="alert P(10px) C($blue)"></div>');
+    });
+
     it('should handle data-react-* truncation correctly', function () {
         var Alerts = React.createClass({
             displayName: 'Alerts',
