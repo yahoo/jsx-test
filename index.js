@@ -41,6 +41,7 @@ module.exports = {
     elementQuerySelectorAll: helper.elementQuerySelectorAll,
     stubComponent: helper.stubComponent,
     withContext: helper.withContext,
+    jsxTranspile: helper.jsxTranspile,
 
     // Assertions
     assertRender: assert.renderMatch,
