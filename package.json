@@ -4,7 +4,8 @@
   "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel/register example/**/*.test.js test/**/*.test.js"
+    "cover": "jenkins-mocha example/**/*.test.js test/**/*.test.js",
+    "test": "jenkins-mocha --no-coverage example/**/*.test.js test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
   "homepage": "https://github.com/yahoo/jsx-test",
   "devDependencies": {
     "babel": "^5.0.0",
-    "mocha": "^2.1.0"
+    "istanbul": "^0.3.15",
+    "jenkins-mocha": "^2.2.0"
   },
   "dependencies": {
     "jsdom": "^3.0.0",
