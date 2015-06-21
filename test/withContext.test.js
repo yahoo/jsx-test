@@ -32,7 +32,7 @@ describe('#withContext', function() {
 
         jsx.assertRender(jsx.withContext(ContextUser, {}), {str: 'Awesome String!'}, '<span>Awesome String!</span>');
     });
-    
+
     it('allows calling methods from underlying component', function () {
         var UnderlyingComponent = React.createClass({
             underlyingMethod: function (n1, n2) {
@@ -53,10 +53,7 @@ describe('#withContext', function() {
     });
 
     it('creates a readable displayName even if Component did not have one', function () {
-        var UnnamedComponent = React.createClass({
-            render: function () {return null;}
-        });
-
+        var UnnamedComponent = require('../example/UnnamedComponent.jsx');
         assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'UnnamedComponent:withContext');
     });
 });
