@@ -23,8 +23,5 @@ describe('#renderComponent', function() {
         // Verify that it's Off by default
         assert.equal(comp.getDOMNode().textContent, 'child');
         assert.equal(comp.getDOMNode().getAttribute('data-foo'), 'bar');
-
-        jsx.unmountComponent(comp);
-        assert.notEqual(comp.isMounted(), true);
     });
 });
