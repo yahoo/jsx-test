@@ -35,6 +35,13 @@ ReactElement renderComponent(ReactComponent comp, Object? props, any? children)
 
 Renders a component w/ its props and children.
 
+### unmountComponent
+```js
+Boolean unmountComponent(ReactComponent comp)
+```
+
+Unmount a component.
+
 ### elementQuerySelector
 ```js
 DOMElement elementQuerySelector(ReactComponent comp, String selector)
