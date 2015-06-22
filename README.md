@@ -1,6 +1,8 @@
 # jsx-test
 [![npm version](https://img.shields.io/npm/v/jsx-test.svg?style=flat-square)](https://www.npmjs.com/package/jsx-test)
 [![Build Status](https://travis-ci.org/yahoo/jsx-test.svg?branch=master)](https://travis-ci.org/yahoo/jsx-test)
+[![Dependency Status](https://img.shields.io/david/yahoo/jsx-test.svg?style=flat-square)](https://david-dm.org/yahoo/jsx-test)
+[![devDependency Status](https://img.shields.io/david/dev/yahoo/jsx-test.svg?style=flat-square)](https://david-dm.org/yahoo/jsx-test#info=devDependencies)
 
 `jsx-test` is a tool that makes it easy to test '.jsx' files and includes some helpers for testing react components.
 
