@@ -16,6 +16,13 @@ describe('#stubComponent', function() {
         jsx.assertRender(ComponentStub, {}, '<p>hello world!</p>');
     });
 
+    it('preserves children content the component', function () {
+        var ComponentStub = jsx.stubComponent('p');
+        jsx.assertRender(ComponentStub, {
+            children: 'blah'
+        }, '<p>blah</p>');
+    });
+
     it('adds all props to data props', function () {
         var ComponentStub = jsx.stubComponent('a', null, true);
 
