@@ -1,5 +1,5 @@
 // jsx-test
-var jsx = require('../../index').jsxTranspile(process.env.COVERAGE);
+var jsx = require('../../index').jsxTranspile();
 var assert = require('assert');
 
 describe('CheckboxWithLabel', function() {
