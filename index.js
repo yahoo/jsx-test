@@ -37,6 +37,7 @@ module.exports = {
     simulateEvent: helper.simulateEvent,
     simulateNativeEvent: helper.simulateNativeEvent,
     renderComponent: helper.renderComponent,
+    unmountComponent: helper.unmountComponent,
     elementQuerySelector: helper.elementQuerySelector,
     elementQuerySelectorAll: helper.elementQuerySelectorAll,
     stubComponent: helper.stubComponent,
