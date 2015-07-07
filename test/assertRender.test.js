@@ -1,7 +1,6 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
-var assert = require('assert');
 
 describe('#assertRender', function() {
     var Alert = React.createClass({
@@ -27,7 +26,7 @@ describe('#assertRender', function() {
 
     it('renders the attomic classes HTML', function () {
         jsx.assertRender(Alert, {
-            className: 'P(10px) C($blue)',
+            className: 'P(10px) C($blue)'
         }, '<div class="alert P(10px) C($blue)"></div>');
     });
 
@@ -65,7 +64,7 @@ describe('#assertRender', function() {
 
         // use + to match atributes of a tag
         jsx.assertRender(Alert, props, '<div+>Looks good</div>');
-        jsx.assertRender(Alert, props, '<div +>Looks good</div>');
+        jsx.assertRender(Alert, props, '<div+>Looks good</div>');
         jsx.assertRender(Alert, props, '<+>Looks good</+>');
 
         // use * to match anything
