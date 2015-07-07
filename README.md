@@ -16,7 +16,7 @@ The main features of `jsx-test` are:
 
 *Note:* If you would like to require jsx files directly please follow [these instructions](https://babeljs.io/docs/setup/)
 
-## Instal
+## Install
 
 ```
 npm install --save-dev jsx-test
