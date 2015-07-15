@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require('react/addons');
 
 var UnnamedComponent = React.createClass({
     render: function() {
