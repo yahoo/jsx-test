@@ -28,7 +28,9 @@
     "jenkins-mocha": "^2.2.0"
   },
   "dependencies": {
-    "jsdom": "^3.0.0",
+    "jsdom": "^3.0.0"
+  },
+  "peerDependencies": {
     "react": "^0.13.0"
   }
 }
