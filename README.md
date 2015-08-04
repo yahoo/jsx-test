@@ -25,8 +25,8 @@ npm install --save-dev jsx-test
 ## Usage
 ### simulateEvent
 ```js
-simulateEvent(ReactComponent element, String event)
-simulateEvent(DOMElement element, String event)
+simulateEvent(ReactComponent element, String event, Object? eventData)
+simulateEvent(DOMElement element, String event, Object? eventData)
 ```
 
 Simulates an `event` on an `element`.
