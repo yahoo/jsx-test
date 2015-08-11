@@ -1,6 +1,6 @@
 {
   "name": "jsx-test",
-  "version": "0.8.0",
+  "version": "0.7.6",
   "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
@@ -23,15 +23,15 @@
   },
   "homepage": "https://github.com/yahoo/jsx-test",
   "devDependencies": {
-    "babel": "^5.0",
-    "istanbul": "^0.3",
-    "jenkins-mocha": "^2.2",
-    "react": "^0.13"
+    "babel": "^5.0.0",
+    "istanbul": "^0.3.15",
+    "jenkins-mocha": "^2.2.0",
+    "react": "^0.13.0"
   },
   "dependencies": {
-    "jsdom": "^6.1"
+    "jsdom": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^0.13"
+    "react": "^0.13.0"
   }
 }
