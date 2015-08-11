@@ -45,7 +45,8 @@ module.exports = {
     jsxTranspile: helper.jsxTranspile,
 
     // Assertions
-    assertRender: assert.renderMatch,
-    assertNotRender: assert.renderNotMatch,
-    assertRenderInclude: assert.renderInclude,
+    assertRender: assert.assertRender,
+    assertNotRender: assert.assertNotRender,
+    assertRenderMatch: assert.assertRenderMatch,
+    assertNoRenderMatch: assert.assertNoRenderMatch
 };
