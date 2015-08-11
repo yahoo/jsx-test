@@ -1,6 +1,6 @@
 {
   "name": "jsx-test",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "An easy way to test your React Components (`.jsx` files).",
   "main": "index.js",
   "scripts": {
