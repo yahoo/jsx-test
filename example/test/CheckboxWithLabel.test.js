@@ -30,10 +30,10 @@ describe('CheckboxWithLabel', function() {
     it('triggers native events', function () {
         var checkbox = jsx.renderComponent(CheckboxWithLabel);
 
-        jsx.simulateNativeEvent(checkbox, 'mouseOver');
+        jsx.simulateEvent(checkbox, 'mouseOver');
         assert.equal(checkbox.state.isHover, true);
 
-        jsx.simulateNativeEvent(checkbox, 'mouseOut');
+        jsx.simulateEvent(checkbox, 'mouseOut');
         assert.equal(checkbox.state.isHover, false);
     });
 
@@ -77,11 +77,11 @@ describe('CheckboxWithLabel', function() {
         });
 
         it('renders with a checkbox field', function () {
-            jsx.assertRender(CheckboxWithLabel, {}, '<input type="checkbox">');
+            jsx.assertRender(CheckboxWithLabel, {}, '<input type="checkbox"+>');
 
             jsx.assertRender(CheckboxWithLabel, {
                 isChecked: true
-            }, '<input type="checkbox" checked>');
+            }, '<input type="checkbox" checked+>');
         });
     });
 });

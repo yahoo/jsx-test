@@ -1,6 +1,6 @@
 // jsx-test
 var jsx = require('../index');
-var React = require('react/addons');
+var React = require('react');
 var assert = require('assert');
 
 describe('#withContext', function() {

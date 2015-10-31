@@ -1,4 +1,4 @@
-var React = require('react/addons');
+var React = require('react');
 
 module.exports = React.createClass({
     displayName: 'CheckboxWithLabel',
@@ -29,7 +29,7 @@ module.exports = React.createClass({
 
     render: function() {
         return (
-            <label onMouseEnter={this.onHover} onMouseLeave={this.onHoverLeave}>
+            <label onMouseOver={this.onHover} onMouseOut={this.onHoverLeave}>
                 <input
                     type="checkbox"
                     checked={this.state.isChecked}
