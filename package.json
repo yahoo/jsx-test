@@ -24,11 +24,11 @@
     "homepage": "https://github.com/yahoo/jsx-test",
     "devDependencies": {
         "babel": "^5.0",
-        "istanbul": "^0.3.15",
         "jenkins-mocha": "^2.2.0",
         "react": "^0.14.0"
     },
     "dependencies": {
+        "istanbul": "^0.3.15",
         "node-jsdom": "^3.1",
         "react-addons-test-utils": "^0.14.1",
         "react-dom": "^0.14.1"
