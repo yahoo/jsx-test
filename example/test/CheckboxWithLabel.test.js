@@ -1,5 +1,4 @@
 // jsx-test
-var ReactDOM = require('react-dom');
 var jsx = require('../../index').jsxTranspile(process.env.COVERAGE);
 var assert = require('assert');
 
@@ -14,18 +13,18 @@ describe('CheckboxWithLabel', function() {
         });
 
         // Verify that it's Off by default
-        assert.equal(ReactDOM.findDOMNode(checkbox).textContent, 'Off');
+        assert.equal(checkbox.getDOMNode().textContent, 'Off');
 
         // Simulate a click and verify that it is now On
         var input = jsx.elementQuerySelector(checkbox, 'input');
 
         // Toggle On
         jsx.simulateEvent(input, 'change');
-        assert.equal(ReactDOM.findDOMNode(checkbox).textContent, 'On');
+        assert.equal(checkbox.getDOMNode().textContent, 'On');
 
         // Toggle Off again
         jsx.simulateEvent(input, 'change');
-        assert.equal(ReactDOM.findDOMNode(checkbox).textContent, 'Off');
+        assert.equal(checkbox.getDOMNode().textContent, 'Off');
     });
 
     it('triggers native events', function () {
