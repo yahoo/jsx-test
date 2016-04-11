@@ -1,7 +1,6 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
-var ReactDOM = require('react-dom');
 var assert = require('assert');
 
 var Component = React.createClass({
@@ -22,7 +21,7 @@ describe('#renderComponent', function() {
         var comp = jsx.renderComponent(Component, { foo: 'bar' }, 'child');
 
         // Verify that it's Off by default
-        assert.equal(ReactDOM.findDOMNode(comp).textContent, 'child');
-        assert.equal(ReactDOM.findDOMNode(comp).getAttribute('data-foo'), 'bar');
+        assert.equal(comp.getDOMNode().textContent, 'child');
+        assert.equal(comp.getDOMNode().getAttribute('data-foo'), 'bar');
     });
 });
