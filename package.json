@@ -1,6 +1,6 @@
 {
     "name": "jsx-test",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "An easy way to test your React Components (`.jsx` files).",
     "main": "index.js",
     "scripts": {
@@ -28,7 +28,7 @@
         "jenkins-mocha": "^2.2.0"
     },
     "dependencies": {
-        "node-jsdom": "^3.1",
+        "jsdom": "^8.1.0",
         "react": "^15.0.0",
         "react-addons-test-utils": "^15.0.0",
         "react-dom": "^15.0.0"
