@@ -1,13 +1,15 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 var assert = require('assert');
 
 describe('#withContext', function() {
     it('gives child context', function () {
-        var ContextUser = React.createClass({
+        var ContextUser = createReactClass({
             contextTypes: {
-                method: React.PropTypes.func
+                method: PropTypes.func
             },
             render: function () {
                 return React.createElement('span', null, this.context.method());
@@ -24,7 +26,7 @@ describe('#withContext', function() {
     });
 
     it('passes props through context wrapper to child', function () {
-        var ContextUser = React.createClass({
+        var ContextUser = createReactClass({
             render: function () {
                 return React.createElement('span', null, this.props.str);
             }
@@ -34,7 +36,7 @@ describe('#withContext', function() {
     });
 
     it('allows calling methods from underlying component', function () {
-        var UnderlyingComponent = React.createClass({
+        var UnderlyingComponent = createReactClass({
             underlyingMethod: function (n1, n2) {
                 return n1 + n2;
             },
@@ -54,6 +56,6 @@ describe('#withContext', function() {
 
     it('creates a readable displayName even if Component did not have one', function () {
         var UnnamedComponent = require('../example/UnnamedComponent.jsx');
-        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'UnnamedComponent:withContext');
+        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'Component:withContext');
     });
 });

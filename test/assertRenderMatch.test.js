@@ -1,8 +1,9 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
+var createReactClass = require('create-react-class');
 
-var Alert = React.createClass({
+var Alert = createReactClass({
     displayName: 'Alert',
     render: function () {
         return React.createElement('div', {
