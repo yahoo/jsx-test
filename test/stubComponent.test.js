@@ -29,6 +29,6 @@ describe('#stubComponent', function() {
         jsx.assertRender(ComponentStub, {
             name: 'Jake The Dog',
             what: 'is it?'
-        }, '<a name="Jake The Dog" data-name="Jake The Dog" data-what="is it?">');
+        }, '<a name="Jake The Dog" data-name="Jake The Dog" what="is it?" data-what="is it?">');
     });
 });
