@@ -2,13 +2,14 @@
 var jsx = require('../index');
 var React = require('react');
 var createReactClass = require('create-react-class');
+var PropTypes = require('prop-types');
 var ReactDOM = require('react-dom');
 var assert = require('assert');
 
 var Component = createReactClass({
     displayName: 'TestComp',
     propTypes: {
-        foo: React.PropTypes.string
+        foo: PropTypes.string
     },
     render: function () {
         var props = {

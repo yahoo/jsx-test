@@ -1,6 +1,7 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
+var PropTypes = require('prop-types');
 var createReactClass = require('create-react-class');
 var assert = require('assert');
 
@@ -8,7 +9,7 @@ describe('#withContext', function() {
     it('gives child context', function () {
         var ContextUser = createReactClass({
             contextTypes: {
-                method: React.PropTypes.func
+                method: PropTypes.func
             },
             render: function () {
                 return React.createElement('span', null, this.context.method());
