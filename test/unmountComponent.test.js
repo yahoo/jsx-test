@@ -1,9 +1,10 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
+var createReactClass = require('create-react-class');
 var assert = require('assert');
 
-var Component = React.createClass({
+var Component = createReactClass({
     displayName: 'TestComp',
     componentWillUnmount: function () {
         this.isUnmountCalled = true;

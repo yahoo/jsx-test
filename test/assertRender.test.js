@@ -1,9 +1,10 @@
 // jsx-test
 var jsx = require('../index');
 var React = require('react');
+var createReactClass = require('create-react-class');
 
 describe('#assertRender', function() {
-    var Alert = React.createClass({
+    var Alert = createReactClass({
         displayName: 'Alert',
         render: function () {
             return React.createElement('div', {
@@ -31,7 +32,7 @@ describe('#assertRender', function() {
     });
 
     it('should handle data-react-* truncation correctly', function () {
-        var Alerts = React.createClass({
+        var Alerts = createReactClass({
             displayName: 'Alerts',
             render: function () {
                 return React.createElement('div', null, [
