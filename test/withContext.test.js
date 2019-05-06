@@ -56,6 +56,6 @@ describe('#withContext', function() {
 
     it('creates a readable displayName even if Component did not have one', function () {
         var UnnamedComponent = require('../example/UnnamedComponent.jsx');
-        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'Component:withContext');
+        assert.equal(jsx.withContext(UnnamedComponent, {}).displayName, 'UnnamedComponent:withContext');
     });
 });
