@@ -6,11 +6,15 @@
 
 // Set browser globals, needs to happen before react is required
 // You must require jsxTest before any React stuff
-var jsdom = require('jsdom').jsdom;
-global.document = jsdom('<!doctype html><html><body></body></html>');
-global.window = document.defaultView;
+const { JSDOM } = require('jsdom');
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const { window } = jsdom;
+global.window = window;
+global.document = window.document;
 global.appContainer = document.createElement('section');
-global.navigator = window.navigator;
+global.navigator = {
+    userAgent: 'node.js'
+};
 global.Event = window.Event;
 document.body.appendChild(appContainer);
 
