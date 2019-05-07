@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/yahoo/jsx-test",
   "devDependencies": {
-    "babel-preset-react": "^6.0.0",
     "babel-core": "^6.0",
+    "babel-preset-react": "^6.0.0",
     "istanbul-lib-instrument": "^3.0.0",
-    "jenkins-mocha": "^6.0.0"
+    "jenkins-mocha": "^7.0.0"
   },
   "dependencies": {
     "create-react-class": "^15.6.2",
