@@ -3,7 +3,9 @@ var jsx = require('../index');
 var React = require('react');
 var assert = require('assert');
 
-describe('#simulateNativeEvent', function () {
+// This has been deprecated for quite some time
+// https://github.com/facebook/react/pull/13407
+describe.skip('#simulateNativeEvent', function () {
     var Component = jsx.stubComponent('button');
 
     it('simulates an event', function () {
