@@ -1,3 +1,7 @@
+> ⚠️ **DEPRECATED / END-OF-LIFE (EOL)** — `jsx-test` is unmaintained as of **2025-10-01**.
+> No new features, issues, PRs, or security fixes will be provided.
+
+
 # jsx-test
 [![npm version](https://img.shields.io/npm/v/jsx-test.svg?style=flat-square)](https://www.npmjs.com/package/jsx-test)
 [![Build Status](https://travis-ci.org/yahoo/jsx-test.svg?branch=master)](https://travis-ci.org/yahoo/jsx-test)
